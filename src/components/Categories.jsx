@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Categories = ({ items, onClickItem }) => {
+const Categories = ({ categories, onClickItem }) => {
 	const [activeItem, setActiveItem] = React.useState(null)
 
 	const onSelectItem = index => {
@@ -13,8 +13,8 @@ const Categories = ({ items, onClickItem }) => {
 				<li className={activeItem === null ? 'active' : ''} onClick={() => onSelectItem(null)}>
 					Все
 				</li>
-				{items &&
-					items.map((item, index) => (
+				{categories &&
+					categories.map((item, index) => (
 						<li
 							className={activeItem === index ? 'active' : ''}
 							onClick={() => {
