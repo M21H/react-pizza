@@ -3,10 +3,8 @@ import React from 'react'
 const SortPopup = ({ items }) => {
 	const [activePopup, setActivePopup] = React.useState(false)
 	const [activeItem, setActiveItem] = React.useState(0)
-
 	const sortRef = React.useRef() //зберігає силку на DOM елемент
-
-	const activeItemName = items[activeItem]
+	const activeItemName = items[activeItem].name
 
 	const togleActivePopup = () => {
 		setActivePopup(!activePopup)
@@ -49,12 +47,12 @@ const SortPopup = ({ items }) => {
 				<div className='sort__popup'>
 					<ul>
 						{items &&
-							items.map((item, index) => (
+							items.map((obj, index) => (
 								<li
 									className={activeItem === index ? 'active' : ''}
 									onClick={() => onSelectItem(index)}
-									key={`${index}-${index}`}>
-									{item}
+									key={`${obj.name}-${index}`}>
+									{obj.name}
 								</li>
 							))}
 					</ul>
