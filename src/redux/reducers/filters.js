@@ -11,6 +11,12 @@ const filters = (state = initialState, action) => {
 				sortBy: action.payload,
 			}
 		}
+		case 'SET_CATEGOTY': {
+			return {
+				...state,
+				category: action.payload,
+			}
+		}
 		default:
 			return state
 	}

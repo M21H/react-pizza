@@ -1,9 +1,10 @@
 import React from 'react'
 
-const SortPopup = ({ items }) => {
+const SortPopup = React.memo(({ items }) => {
 	const [activePopup, setActivePopup] = React.useState(false)
 	const [activeItem, setActiveItem] = React.useState(0)
-	const sortRef = React.useRef() //зберігає силку на DOM елемент
+	//зберігає силку на DOM елемент
+	const sortRef = React.useRef()
 	const activeItemName = items[activeItem].name
 
 	const togleActivePopup = () => {
@@ -60,6 +61,6 @@ const SortPopup = ({ items }) => {
 			)}
 		</div>
 	)
-}
+})
 
 export default SortPopup
