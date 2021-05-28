@@ -16,7 +16,7 @@ const PizzaBlock = ({ category, imageUrl, name, price, rating, sizes, types }) =
 	const onSelectSize = index => {
 		setActiveSize(index)
 	}
-
+  
 	return (
 		<div className='pizza-block'>
 			<img className='pizza-block__image' src={imageUrl} alt='Pizza' />
