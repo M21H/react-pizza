@@ -1,3 +1,9 @@
+## Installing this project
+
+1) `yarn install` - install all dependencies
+2) `yarn server` - run server on port http://localhost:6195
+3) `yarn start` - run app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

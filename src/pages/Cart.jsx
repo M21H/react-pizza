@@ -36,6 +36,7 @@ const Cart = () => {
 
 	const onClickOrder = () => {
 		console.log('ВАШ ЗАКАЗ', items)
+		alert(JSON.stringify(items, null, 2))
 	}
 
 	return (
