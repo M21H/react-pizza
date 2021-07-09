@@ -1,4 +1,4 @@
-## Installing this project
+# Installing this project
 
 1) `yarn install` - install all dependencies
 2) `yarn server` - run server on port http://localhost:6195
